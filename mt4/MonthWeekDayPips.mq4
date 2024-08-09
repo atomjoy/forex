@@ -15,9 +15,9 @@ string Text2 = "";
 string Text3 = "";
 double profit = 0;
 
-double CalcPipCost(double cost) {
-   if(Digits == 3 || Digits == 2 || Digits == 1) {
-      return cost / 10;
+double CalcPipCost(double tickValue) {
+   if(Digits == 5 || Digits == 3 || Digits == 2 || Digits == 1) {
+      return tickValue / 10;
    }
    return cost;
 }
@@ -141,7 +141,7 @@ int start()
    
    //--- Indicator window comment
    // Comment(StringFormat("Show prices\nAsk = %G\nBid = %G\nSpread = %d\nPip cost = %G", Ask, Bid, Spread, PipCost);
-   
+
    return(0);                          
 }   
 
