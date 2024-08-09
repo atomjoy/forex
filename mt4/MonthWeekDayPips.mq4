@@ -103,21 +103,21 @@ int start()
     
    ObjectCreate("signal1",OBJ_LABEL,windowIndex,0,0);
    ObjectSet("signal1",OBJPROP_XDISTANCE,30);
-   ObjectSet("signal1",OBJPROP_YDISTANCE,30);
+   ObjectSet("signal1",OBJPROP_YDISTANCE,FontSize + 10);
    ObjectSetText("signal1",Text1,FontSize,"Arial", Black);
          
    Text2 = "MonthPips: " + DoubleToString(Mpips,2) + " WeekPips: " + DoubleToString(Wpips,2) + " DayPips: " + DoubleToString(Dpips,2);
    
    ObjectCreate("signal2",OBJ_LABEL,windowIndex,0,0);
    ObjectSet("signal2",OBJPROP_XDISTANCE,30);
-   ObjectSet("signal2",OBJPROP_YDISTANCE,50);
+   ObjectSet("signal2",OBJPROP_YDISTANCE,(FontSize + 10) * 2);
    ObjectSetText("signal2",Text2,FontSize,"Arial", Green);
    
    Text3 = "Pip Cost: " + DoubleToString(PipCost,2) + " Spread: " + DoubleToString(Spread,2) + " Ask: " + DoubleToString(Ask,2) + " Bid: " + DoubleToString(Bid,2);
    
    ObjectCreate("signal3",OBJ_LABEL,windowIndex,0,0);
    ObjectSet("signal3",OBJPROP_XDISTANCE,30);
-   ObjectSet("signal3",OBJPROP_YDISTANCE,70);
+   ObjectSet("signal3",OBJPROP_YDISTANCE,(FontSize +10) * 3);
    ObjectSetText("signal3",Text3,FontSize,"Arial", Red);
    
    //--- Indicator window comment
