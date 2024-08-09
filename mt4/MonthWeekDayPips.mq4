@@ -132,7 +132,7 @@ int start()
    ObjectSet("signal2",OBJPROP_YDISTANCE,(FontSize + 10) * 3);
    ObjectSetText("signal2",Text2,FontSize,"Arial", Green);
    
-   Text3 = "Pip Cost: " + DoubleToString(CalcPipCost(PipCost),6) + " Spread: " + DoubleToString(Spread,2) + " Ask: " + DoubleToString(Ask,2) + " Bid: " + DoubleToString(Bid,2);
+   Text3 = "Pip Cost: " + DoubleToString(CalcPipCost(PipCost),Digits + 1) + " Spread: " + DoubleToString(Spread,2) + " Ask: " + DoubleToString(Ask,2) + " Bid: " + DoubleToString(Bid,2);
    
    ObjectCreate("signal3",OBJ_LABEL,windowIndex,0,0);
    ObjectSet("signal3",OBJPROP_XDISTANCE,30);
