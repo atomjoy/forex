@@ -15,6 +15,13 @@ string Text2 = "";
 string Text3 = "";
 double profit = 0;
 
+double CalcPipCost(double cost) {
+   if(Digits == 3 || Digits == 2 || Digits == 1) {
+      return cost / 10;
+   }
+   return cost;
+}
+
 int init()                         
 {
    IndicatorShortName("MonthWeekDayPips");
@@ -92,13 +99,17 @@ int start()
       txt4 = " SELL ";
    }
    
-   double PipCost;
+   double PipCost;   
    int Spread;
    
    //Ask=SymbolInfoDouble(Symbol(),SYMBOL_ASK);
-   //Bid=SymbolInfoDouble(Symbol(),SYMBOL_BID);
+   //Bid=SymbolInfoDouble(Symbol(),SYMBOL_BID);   
    Spread=SymbolInfoInteger(Symbol(),SYMBOL_SPREAD);
-   PipCost=(MarketInfo(Symbol(),MODE_TICKVALUE) * Point) / MarketInfo(Symbol(),MODE_TICKSIZE);
+   PipCost=(MarketInfo(Symbol(),MODE_TICKVALUE) * Point) / MarketInfo(Symbol(),MODE_TICKSIZE);      
+   
+   double SymbolPoint=MarketInfo(Symbol(),MODE_POINT);
+   double TickSize=MarketInfo(Symbol(),MODE_TICKSIZE);
+   double TickValue=MarketInfo(Symbol(),MODE_TICKVALUE);
    
    Text0 = Symbol() + " Point: " + Point;
    
@@ -121,7 +132,7 @@ int start()
    ObjectSet("signal2",OBJPROP_YDISTANCE,(FontSize + 10) * 3);
    ObjectSetText("signal2",Text2,FontSize,"Arial", Green);
    
-   Text3 = "Pip Cost: " + DoubleToString(PipCost,2) + " Spread: " + DoubleToString(Spread,2) + " Ask: " + DoubleToString(Ask,2) + " Bid: " + DoubleToString(Bid,2);
+   Text3 = "Pip Cost: " + DoubleToString(CalcPipCost(PipCost),6) + " Spread: " + DoubleToString(Spread,2) + " Ask: " + DoubleToString(Ask,2) + " Bid: " + DoubleToString(Bid,2);
    
    ObjectCreate("signal3",OBJ_LABEL,windowIndex,0,0);
    ObjectSet("signal3",OBJPROP_XDISTANCE,30);
@@ -130,7 +141,7 @@ int start()
    
    //--- Indicator window comment
    // Comment(StringFormat("Show prices\nAsk = %G\nBid = %G\nSpread = %d\nPip cost = %G", Ask, Bid, Spread, PipCost);
-     
+   
    return(0);                          
 }   
 
