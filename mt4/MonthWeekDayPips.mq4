@@ -6,9 +6,10 @@
 #property strict
 #property indicator_separate_window // Drawing in a separate window
 
-extern int FontSize = 12;   
+extern int FontSize = 11;   
 
 int windowIndex;
+string Text0 = "";
 string Text1 = "";
 string Text2 = "";
 string Text3 = "";
@@ -34,7 +35,7 @@ int start()
 {
    ObjectsDeleteAll(windowIndex);
    
-   profit = 0;   
+   profit = 0;      
    string txt1 = "";
    string txt2 = "";
    string txt3 = "";
@@ -99,25 +100,32 @@ int start()
    Spread=SymbolInfoInteger(Symbol(),SYMBOL_SPREAD);
    PipCost=(MarketInfo(Symbol(),MODE_TICKVALUE) * Point) / MarketInfo(Symbol(),MODE_TICKSIZE);
    
-   Text1 = Symbol() + "Point: " + Point + " Trends: [  Month: " + txt3 + " Week: " + txt2 + " Day: " + txt1 + " Ma50: " + txt4 + " ]";
+   Text0 = Symbol() + " Point: " + Point;
+   
+   ObjectCreate("signal0",OBJ_LABEL,windowIndex,0,0);
+   ObjectSet("signal0",OBJPROP_XDISTANCE,30);
+   ObjectSet("signal0",OBJPROP_YDISTANCE,FontSize + 10);
+   ObjectSetText("signal0",Text0,FontSize,"Arial", Black);
+   
+   Text1 = "Trends: [  M: " + txt3 + " W: " + txt2 + " D: " + txt1 + " MA50: " + txt4 + " ]";
     
    ObjectCreate("signal1",OBJ_LABEL,windowIndex,0,0);
    ObjectSet("signal1",OBJPROP_XDISTANCE,30);
-   ObjectSet("signal1",OBJPROP_YDISTANCE,FontSize + 10);
+   ObjectSet("signal1",OBJPROP_YDISTANCE,(FontSize + 10) * 2);
    ObjectSetText("signal1",Text1,FontSize,"Arial", Black);
          
    Text2 = "MonthPips: " + DoubleToString(Mpips,2) + " WeekPips: " + DoubleToString(Wpips,2) + " DayPips: " + DoubleToString(Dpips,2);
    
    ObjectCreate("signal2",OBJ_LABEL,windowIndex,0,0);
    ObjectSet("signal2",OBJPROP_XDISTANCE,30);
-   ObjectSet("signal2",OBJPROP_YDISTANCE,(FontSize + 10) * 2);
+   ObjectSet("signal2",OBJPROP_YDISTANCE,(FontSize + 10) * 3);
    ObjectSetText("signal2",Text2,FontSize,"Arial", Green);
    
    Text3 = "Pip Cost: " + DoubleToString(PipCost,2) + " Spread: " + DoubleToString(Spread,2) + " Ask: " + DoubleToString(Ask,2) + " Bid: " + DoubleToString(Bid,2);
    
    ObjectCreate("signal3",OBJ_LABEL,windowIndex,0,0);
    ObjectSet("signal3",OBJPROP_XDISTANCE,30);
-   ObjectSet("signal3",OBJPROP_YDISTANCE,(FontSize +10) * 3);
+   ObjectSet("signal3",OBJPROP_YDISTANCE,(FontSize + 10) * 4);
    ObjectSetText("signal3",Text3,FontSize,"Arial", Red);
    
    //--- Indicator window comment
