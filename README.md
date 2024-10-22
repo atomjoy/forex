@@ -5,7 +5,7 @@ Forex wskaźniki i profile do Metatrader 4 (mt4).
 
 # Wymagany depozyt
 
-Wymagany depozyt na 1 Lot w PLN (mn. w. gdyż liczy różnie w zależności od wielkości pozycji lub kierunku [0.1 x 10 != 1.0 Lot]).
+Wymagany depozyt na 1 Lot w PLN mforex konto demo (mn. w. gdyż liczy różnie w zależności od wielkości pozycji lub kierunku [0.1 x 10 != 1.0 Lot]).
 
 ```sh
 POL20     4650 PLN
