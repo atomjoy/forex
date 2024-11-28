@@ -59,8 +59,9 @@ int start()
                ObjectSet( gridname, OBJPROP_COLOR, LineColor2 );
                ObjectSet( gridname, OBJPROP_STYLE, STYLE_SOLID );
              } else {
-               ObjectSet( gridname, OBJPROP_COLOR, LineColor1 );
-               ObjectSet( gridname, OBJPROP_STYLE, STYLE_DASH );
+               ObjectDelete( gridname );
+               //ObjectSet( gridname, OBJPROP_COLOR, LineColor1 );
+               //ObjectSet( gridname, OBJPROP_STYLE, STYLE_DASH );
              }
                
             // Style line
