@@ -66,7 +66,7 @@ int deinit()
 
 int start()
 {
-   IndicatorShortName("Regression");
+   IndicatorShortName("Regression2000");
    int counted_bars=IndicatorCounted();
    
    if (Bars < bars){
