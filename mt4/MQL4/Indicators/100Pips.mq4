@@ -5,10 +5,11 @@
 
 #property indicator_chart_window
 
+
 extern int       GridWeeks=10;            // Period over which to calc High/Low of gird
 extern int       GridPips=100;            // Size of grid in Pips
-extern color     LineColor1=Black;        // Color of grid
 extern color     LineColor2=DodgerBlue;   // Every 100 pips, change grid color to this.
+extern color     LineColor1=Black;        // Color of grid
 extern int       LineWidth=2;
 
 bool firstTime = true;

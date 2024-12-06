@@ -13,7 +13,7 @@ double m;
 
 int init()
 {
-   SetIndexStyle(0,DRAW_LINE,0,3);   
+   SetIndexStyle(0,DRAW_LINE,0,5);   
    SetIndexBuffer(0,Weekopen);
    
    string mopen;   
