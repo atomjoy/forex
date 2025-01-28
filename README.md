@@ -7,7 +7,7 @@ Forex wskaźniki i profile do Metatrader 4 (mt4).
 
 # Wymagany depozyt
 
-Wymagany depozyt na 1.0 Lot w PLN mforex konto demo (mn. w. gdyż liczy różnie w zależności od wielkości pozycji lub kierunku [0.1 x 10 != 1.0 Lot]).
+Wymagany depozyt na 1.0 Lot w PLN konto demo (mn. w. gdyż liczy różnie w zależności od wielkości pozycji lub kierunku [0.1 x 10 != 1.0 Lot]).
 
 ```sh
 POL20      4650 PLN
@@ -35,3 +35,7 @@ POL20    200 PLN (1500-1600)
 GOLD     200 PLN (2000-2050)
 DE40     500 PLN (20000-20500)
 ```
+
+# Nie polecać
+
+- Mforex 180 dni demo - Unikać konta w mforex zakompleksiona obsługa nie używać. Dzwonia co chwila jak sępy i dopytują czy konto realne otwierasz (na koncie zrobiłem [-80%] w 1 miesiącu jedną pozycją postawioną w samym dołku na gppjpy w sierpniu buahaha :]). Po tym jak już facet usłyszał że nie mam czasu siedzieć i jednak nie będę otwierał konta realnego skwitował że nie sprawdziła się chyba moja strategia na investowanie.
