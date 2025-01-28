@@ -1,41 +1,7 @@
-# MT4 Wskaźniki forex
-Forex wskaźniki i profile do Metatrader 4 (mt4).
+# Forex MT4 Indicators
+
+Forex custom indicators and profiles for Metatrader 4 (mt4).
 
 <img src="https://raw.githubusercontent.com/atomjoy/forex/main/mt4.jpg" width="100%" />
 
 <img src="https://raw.githubusercontent.com/atomjoy/forex/main/mt4-full.png" width="100%" />
-
-# Wymagany depozyt
-
-Wymagany depozyt na 1.0 Lot w PLN konto demo (mn. w. gdyż liczy różnie w zależności od wielkości pozycji lub kierunku [0.1 x 10 != 1.0 Lot]).
-
-```sh
-POL20      4650 PLN
-EURUSD    14851 PLN
-GBPJPY    21900 PLN
-CHFPLN    27660 PLN
-WTI       32770 PLN
-US30      47510 PLN
-GOLD      59430 PLN
-US500     63150 PLN
-SILVER    73140 PLN
-DE40     110000 PLN
-```
-
-# Zysk/Strata
-
-Pozycja na 0.01 Lota
-
-```sh
-EURUSD    20 PLN (1.070 - 1.075)
-US30     100 PLN (44000-44500)
-GBPJPY   150 PLN (200-205)
-WTI      200 PLN (70-75)
-POL20    200 PLN (1500-1600)
-GOLD     200 PLN (2000-2050)
-DE40     500 PLN (20000-20500)
-```
-
-# Nie polecać
-
-- Mforex 180 dni demo - Unikać konta w mforex zakompleksiona obsługa nie używać. Dzwonia co chwila jak sępy i dopytują czy konto realne otwierasz (na koncie zrobiłem [-80%] w 1 miesiącu jedną pozycją postawioną w samym dołku na gppjpy w sierpniu buahaha :]). Po tym jak już facet usłyszał że nie mam czasu siedzieć i jednak nie będę otwierał konta realnego skwitował że nie sprawdziła się chyba moja strategia na investowanie.
